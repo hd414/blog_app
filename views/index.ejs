@@ -1,0 +1,19 @@
+<%- include('header'); %>
+
+<h1>Demo Blog</h1>
+
+<%blogs.forEach(function(blog){%>
+
+<div class = "ui main text container segment">
+ <div class = "ui huge header flag"><h3><%=blog.title%></h3> </div>
+	<div class ="ui top attached segment">
+	<p><img class =" ui centered rounded image " src ="<%=blog.img%>"></p>
+	<p><h4><%-blog.body.substring(0,50)%></p>
+	<p><%=blog.created%></p>
+	<a href="/blog/<%=blog._id  %>" class = "ui floated basic violet button">Read More<i class = "right chevron icon"></i></a>
+	</div>
+ </div>
+<%})%>
+
+
+<%- include('footer'); %>

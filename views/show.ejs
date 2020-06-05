@@ -1,0 +1,37 @@
+<%- include('header'); %>
+
+
+<div class = "ui main text container segment">
+
+  <div class = "ui huge header flag"><%=blog.title%> </div>
+<div class ="ui top attached segment">
+ <div class = "item">
+      <img class =" ui centered rounded image " src ="<%=blog.img%>">
+      <div class ="content">
+       <p><%=blog.created.toDateString()%></p>
+      </div>
+      <div class ="descrption">
+        <p><%=blog.body%></p>
+      </div>
+      <form id = "delete" action = "/blog/<%=blog._id%>?_method=delete" method ="post">
+       <a href = "/blog/<%=blog._id%>/edit" class = "ui orange basic button" >EDIT</a> 
+        <button class = "ui red basic button">DELETE</button> 
+      </form>
+
+      
+      
+  </div>
+</div>
+  
+
+   
+
+
+</div>
+
+
+
+
+
+
+<%- include('header'); %>
